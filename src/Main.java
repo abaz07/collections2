@@ -1,19 +1,35 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Задание 1");
+        List<Integer> nums = List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7);
+        for (Integer num : nums){
+            if(num % 2 !=0){
+                System.out.println(num);
+            }
+        }
+        System.out.println("Задание 2");
+        Set<Integer> integers = new TreeSet<>(nums);
+        for (Integer num : integers){
+            if(num % 2 ==0){
+                System.out.println(num);
+            }
+        }
+        System.out.println("Задание 3");
+        List<String> strings = List.of("один", "два","два", "три", "три", "три");
+        Set<String> StringHashSet = new HashSet<>(strings);
+        System.out.println(StringHashSet);
+        System.out.println("Задание 4");
+        Map<String, Integer> result = new HashMap<>();
+        for (String str: strings){
+            Integer value = result.get(str);
+            if(value != null){
+                result.put(str, value + 1);
+            } else {
+                result.put(str, 1);
+            }
+        }
+        System.out.println(result);
     }
 }
-//private final String temp = "с://temp";
-//private static final List<Integer> Nums = List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7);
-//public static void main(String[] args) {
-//    List<Integer> nums = List.of(1, 1, 2, 3, 4, 4, 5, 5, 6, 7);
-//    for (Integer num : nums){
-//        if(num % 2 != 0){
-//            System.out.println(num);
-//        }
-//    }
-//}
